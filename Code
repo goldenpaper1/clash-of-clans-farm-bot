@@ -1,0 +1,225 @@
+import numpy as np
+import pyautogui as pg
+import time
+import ctypes
+import random
+from datetime import datetime
+
+#wheres your screen
+global screen 
+
+screen = (0,0,1919,1079)
+
+# Windows Maus click Events
+MOUSEEVENTF_LEFTDOWN = 0x0002
+MOUSEEVENTF_LEFTUP = 0x0004
+
+#BUTTONS
+attack1 = "./images/buttons/attack.png"
+attack2 = "./images/buttons/find_attack.png"
+attack3 = "./images/buttons/attack2.png"
+beenden = "./images/buttons/beenden.png"
+nachHause = "./images/buttons/nachHause.png"
+ok = "./images/buttons/ok.png"
+aufgeben = "./images/buttons/aufgeben.png"
+
+#TROOPS
+dragon = "./images/troops/dragon.png"
+batSpell = "./images/troops/batspell.png"
+slammer = "./images/troops/slammer.png"
+queen = "./images/troops/queen.png"
+glad = "./images/troops/glad.png"
+prinz = "./images/troops/prinz.png"
+warden = "./images/troops/warden.png"
+
+
+def waitForImage(image, confidence=0.7, region=screen, timeout=60, check_interval=1):
+
+    start = time.time()
+    while time.time() - start < timeout:
+        pos = pg.locateCenterOnScreen(image=image, confidence=confidence, region=region)
+        if pos:
+            return pos
+        time.sleep(check_interval)
+    return None
+
+
+def getPos():
+    while True:
+        pos = pg.position()
+        print(pos)
+        print(pg.pixel(pos.x, pos.y))
+        time.sleep(random.uniform(1, 1.5))
+
+def gameStart():
+            time.sleep(1)
+            i = 0
+            #press attack
+            button1 = pg.locateCenterOnScreen(image=attack1,confidence=0.7,region=screen) 
+            pg.click(button1)
+            time.sleep(random.uniform(1, 2))
+
+            #press find attack
+            button2 = pg.locateCenterOnScreen(image=attack2,confidence=0.7,region=screen) 
+            pg.click(button2)
+            time.sleep(random.uniform(1.5, 2.5))
+
+            #Attack
+            button3 = pg.locateCenterOnScreen(image=attack3,confidence=0.7,region=screen) 
+            pg.click(button3)
+            time.sleep(random.uniform(4, 5))
+
+            #Dragons
+            troop1 = pg.locateCenterOnScreen(image=dragon,confidence=0.7,region=screen)
+            pg.click(troop1)
+            time.sleep(random.uniform(0.3,0.5))
+
+            ctypes.windll.user32.SetCursorPos(random.randint(610,620),random.randint(850,860))
+            while i < 17:
+                ctypes.windll.user32.mouse_event(MOUSEEVENTF_LEFTDOWN, 0, 0, 0, 0)
+                ctypes.windll.user32.mouse_event(MOUSEEVENTF_LEFTUP, 0, 0, 0, 0)
+                i += 1
+                time.sleep(random.uniform(0.1,0.15))
+            time.sleep(random.uniform(0.3,0.5))
+
+
+            #Batspell
+            troop2 = pg.locateCenterOnScreen(image=batSpell,confidence=0.7,region=screen)
+            pg.click(troop2)
+            i = 0
+            time.sleep(random.uniform(0.3,0.5))
+            
+            ctypes.windll.user32.SetCursorPos(random.randint(740,760),random.randint(740,760))
+            while i < 12:
+                ctypes.windll.user32.mouse_event(MOUSEEVENTF_LEFTDOWN, 0, 0, 0, 0)
+                ctypes.windll.user32.mouse_event(MOUSEEVENTF_LEFTUP, 0, 0, 0, 0)
+                i += 1
+                time.sleep(random.uniform(0.1,0.15))
+            time.sleep(random.uniform(0.3,0.5))
+
+
+            #Slammer
+            troop3 = pg.locateCenterOnScreen(image=slammer,confidence=0.7,region=screen)
+            pg.click(troop3)
+            time.sleep(random.uniform(0.1,0.2))
+            
+            ctypes.windll.user32.SetCursorPos(random.randint(610,620),random.randint(850,860))
+        
+            ctypes.windll.user32.mouse_event(MOUSEEVENTF_LEFTDOWN, 0, 0, 0, 0)
+            ctypes.windll.user32.mouse_event(MOUSEEVENTF_LEFTUP, 0, 0, 0, 0)
+                
+            time.sleep(random.uniform(0.1,0.2))
+
+
+            #Warden
+            troop5 = pg.locateCenterOnScreen(image=warden,confidence=0.7,region=screen)
+            pg.click(troop5)
+            time.sleep(random.uniform(0.1,0.2))
+            
+            ctypes.windll.user32.SetCursorPos(random.randint(610,620),random.randint(850,860))
+           
+            ctypes.windll.user32.mouse_event(MOUSEEVENTF_LEFTDOWN, 0, 0, 0, 0)
+            ctypes.windll.user32.mouse_event(MOUSEEVENTF_LEFTUP, 0, 0, 0, 0)
+                
+            time.sleep(random.uniform(0.1,0.2))
+
+
+            #Queen
+            troop4 = pg.locateCenterOnScreen(image=queen,confidence=0.7,region=screen)
+            pg.click(troop4)
+            time.sleep(random.uniform(0.1,0.2))
+            
+            ctypes.windll.user32.SetCursorPos(random.randint(610,620),random.randint(850,860))
+           
+            ctypes.windll.user32.mouse_event(MOUSEEVENTF_LEFTDOWN, 0, 0, 0, 0)
+            ctypes.windll.user32.mouse_event(MOUSEEVENTF_LEFTUP, 0, 0, 0, 0)
+               
+            time.sleep(random.uniform(0.1,0.2))
+
+
+            #Prince
+            troop6 = pg.locateCenterOnScreen(image=prinz,confidence=0.7,region=screen)
+            pg.click(troop6)
+            time.sleep(random.uniform(0.1,0.2))
+            
+            #Prinz setzten
+            ctypes.windll.user32.SetCursorPos(random.randint(610,620),random.randint(850,860))
+            
+            ctypes.windll.user32.mouse_event(MOUSEEVENTF_LEFTDOWN, 0, 0, 0, 0)
+            ctypes.windll.user32.mouse_event(MOUSEEVENTF_LEFTUP, 0, 0, 0, 0)
+            
+            time.sleep(random.uniform(0.1,0.2))
+
+            
+            #Glad
+            troop7 = pg.locateCenterOnScreen(image=glad,confidence=0.7,region=screen)
+            pg.click(troop7)
+            time.sleep(random.uniform(0.1,0.2))
+            
+            ctypes.windll.user32.SetCursorPos(random.randint(610,620),random.randint(850,860))
+            
+            ctypes.windll.user32.mouse_event(MOUSEEVENTF_LEFTDOWN, 0, 0, 0, 0)
+            ctypes.windll.user32.mouse_event(MOUSEEVENTF_LEFTUP, 0, 0, 0, 0)
+            
+            time.sleep(random.uniform(0.1,0.2))
+
+
+            #activate hero abilities
+            troop4 = pg.locateCenterOnScreen(image=queen,confidence=0.7,region=screen)
+            pg.click(troop4)
+
+            time.sleep(random.uniform(0.2,0.3))
+
+            troop6 = pg.locateCenterOnScreen(image=prinz,confidence=0.7,region=screen)
+            pg.click(troop6)
+
+            time.sleep(random.uniform(0.15,0.4))
+
+            troop7 = pg.locateCenterOnScreen(image=glad,confidence=0.7,region=screen)
+            pg.click(troop7)
+
+            time.sleep(random.uniform(0.3,0.4))
+
+            troop5 = pg.locateCenterOnScreen(image=warden,confidence=0.7,region=screen)
+            pg.click(troop5)
+
+            #time.sleep(random.randint(46,53))
+
+            #end fight
+            print("before while")
+            while True:
+                
+                try:
+                    button7 = pg.locateCenterOnScreen(image=beenden, confidence=0.8, region=screen)
+                    print("button found")
+                except Exception as e:
+                    button7 = None
+                if button7 is not None:
+                    pg.click(button7)
+                    print("button clicked")
+                    break
+            print("after while")
+
+            #ctypes.windll.user32.SetCursorPos(114,848)
+            
+            #ctypes.windll.user32.mouse_event(MOUSEEVENTF_LEFTDOWN, 0, 0, 0, 0)
+            #ctypes.windll.user32.mouse_event(MOUSEEVENTF_LEFTUP, 0, 0, 0, 0)
+            time.sleep(random.uniform(0.5,1))
+            
+            button5 = pg.locateCenterOnScreen(image=ok, confidence=0.7, region=screen)
+            pg.click(button5)
+            time.sleep(random.uniform(1.5,2.5))
+
+            button6 = pg.locateCenterOnScreen(image=nachHause, confidence=0.7, region=screen)
+            pg.click(button6)
+            time.sleep(random.uniform(4,5))
+
+
+
+            gameStart()          
+
+
+
+if __name__ == "__main__":
+    #getPos()
+    gameStart()
