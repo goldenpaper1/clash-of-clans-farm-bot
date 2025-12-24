@@ -1,3 +1,4 @@
+### not finished with the readme
 # clash-of-clans-farm-bot
 
 # 1. requirements:
