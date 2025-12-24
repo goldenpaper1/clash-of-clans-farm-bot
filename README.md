@@ -30,6 +30,10 @@ you should see: Python 3.10.4
 
 if it says anything else, run the python installer again, uninstall python and then run it again and install python again.
 
+# get the Code:
+
+download the "coc bot" folder
+
 # IDE (the thing you run code in)
 
-i recommend
+i recommend Visual Studio Code: https://code.visualstudio.com/
