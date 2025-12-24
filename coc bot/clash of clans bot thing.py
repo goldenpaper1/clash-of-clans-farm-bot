@@ -186,19 +186,15 @@ def gameStart():
             #time.sleep(random.randint(46,53))
 
             #end fight
-            print("before while")
             while True:
                 
                 try:
                     button7 = pg.locateCenterOnScreen(image=beenden, confidence=0.8, region=screen)
-                    print("button found")
                 except Exception as e:
                     button7 = None
                 if button7 is not None:
                     pg.click(button7)
-                    print("button clicked")
                     break
-            print("after while")
 
             #ctypes.windll.user32.SetCursorPos(114,848)
             
@@ -222,4 +218,5 @@ def gameStart():
 
 if __name__ == "__main__":
     #getPos()
+
     gameStart()
