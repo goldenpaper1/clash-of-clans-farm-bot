@@ -37,3 +37,39 @@ download the "coc bot" folder
 # IDE (the thing you run code in)
 
 i recommend Visual Studio Code: https://code.visualstudio.com/
+
+when visual studio code is open: press on "file" and then "open folder"
+
+<img width="1606" height="938" alt="github photo5" src="https://github.com/user-attachments/assets/97eb633e-6539-4ff3-8c0e-21daf4b2d210" />
+
+now make sure to select the folder "Coc bot"
+
+<img width="1920" height="1040" alt="github photo6" src="https://github.com/user-attachments/assets/4d53b40e-12e0-45ab-9c05-9c0b5499e50b" />
+
+you should now see something like this:
+
+<img width="1920" height="1043" alt="github photo7" src="https://github.com/user-attachments/assets/dc849260-023c-463a-9e77-d2b0834a4226" />
+
+open up extensions and press install on python:
+
+<img width="1491" height="888" alt="github photo8" src="https://github.com/user-attachments/assets/7866efbb-d019-40af-81d5-c4bf924735d7" />
+
+close the python tab at the top, open up your "Explorer" tab and go to your code.
+at the bottom right there should be "Python 3.10(64-bit)".
+
+<img width="1396" height="835" alt="github photo9" src="https://github.com/user-attachments/assets/67374fe7-d444-471a-826b-d4cdb44aa656" />
+
+## whats the size of your screen?
+
+# Right click on your desktop, and there'll be an option for Display Settings.
+
+<img width="1184" height="923" alt="github photo11" src="https://github.com/user-attachments/assets/3c0997f7-d5a6-4fa2-a318-f51f3dc00c57" />
+
+# if we have the same screen:
+open clash of clans and put language on english then skip to: "END STEPS"
+
+
+## END STEPS
+now press the "run button on the top right:
+
+<img width="1582" height="742" alt="github photo10" src="https://github.com/user-attachments/assets/02aad0f9-35ea-45d5-8faf-2f4624772bcb" />
